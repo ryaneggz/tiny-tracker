@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js & wait-on tcp:8080 && jest --runInBand; kill $(lsof -t -i:8080) || true"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,11 @@
     "better-sqlite3": "^12.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.4",
+    "wait-on": "^7.2.0",
+    "lsof": "^0.1.0"
   }
 }
