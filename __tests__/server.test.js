@@ -4,10 +4,8 @@ const http = require('http');
 let app;
 let server;
 
-beforeAll(() => {
-  // require the app by starting the server module
-  app = require('express')();
-  // mount the actual server.js app by requiring and exporting express app
+beforeAll(async () => {
+  // Ensure server is running before tests (npm test starts it)
 });
 
 describe('basic endpoints', () => {
