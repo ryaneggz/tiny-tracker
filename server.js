@@ -99,6 +99,15 @@ app.get("/pixel.gif", (req, res) => {
     ref: String(req.query.r || ""),
     uid: String(req.query.uid || ""),
     kind: "pixel",
+    event_type: String(req.query.event_type || 'page_view'),
+    event_name: null,
+    element_tag: null,
+    element_text: null,
+    link_url: null,
+    button_type: null,
+    form_id: null,
+    duration: null,
+    client_timestamp: null,
   });
   res.setHeader("Cache-Control", "no-store, must-revalidate");
   res.setHeader("Content-Type", "image/gif");

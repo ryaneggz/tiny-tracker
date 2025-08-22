@@ -12,9 +12,7 @@ beforeAll(() => {
 
 describe('basic endpoints', () => {
   test('GET /pixel.gif returns 200 and gif', async () => {
-    const srvModule = require('../server');
-    // server.js starts listening immediately; create requests against localhost
-    const res = await request('http://localhost:8080').get('/pixel.gif');
+    const res = await request('http://localhost:8080').get('/pixel.gif').query({ event_type: 'page_view' });
     expect(res.status).toBe(200);
     expect(res.headers['content-type']).toMatch(/image\/gif/);
     expect(res.headers['cache-control']).toMatch(/no-store/);
