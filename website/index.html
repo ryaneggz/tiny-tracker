@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Demo Site</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        nav { margin-bottom: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
+        nav a:hover { text-decoration: underline; }
+        .cta-button { background: #28a745; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .secondary-button { background: #6c757d; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px; }
+        .hero { background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 20px 0; text-align: center; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to Our Demo Site</h1>
+        <p>Experience advanced click tracking and analytics in action!</p>
+        <button class="cta-button" data-track-event="hero-get-started">Get Started</button>
+        <button class="secondary-button" data-track-event="hero-learn-more">Learn More</button>
+    </div>
+
+    <h2>Features</h2>
+    <p>This site demonstrates various tracking capabilities:</p>
+    <ul>
+        <li>Page view tracking</li>
+        <li>Click event tracking</li>
+        <li>Form submission tracking</li>
+        <li>Time on page tracking</li>
+    </ul>
+
+    <h2>Try These Interactions</h2>
+    <p>Click on any of these elements to see tracking in action:</p>
+    <button data-track-event="demo-button-1">Demo Button 1</button>
+    <button class="secondary-button" data-track-event="demo-button-2">Demo Button 2</button>
+    
+    <p>External links:</p>
+    <a href="https://www.google.com" data-track-event="external-google">Visit Google</a> |
+    <a href="https://github.com" data-track-event="external-github">Visit GitHub</a>
+
+    <script src="tracker.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Demo Site</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        nav { margin-bottom: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
+        nav a:hover { text-decoration: underline; }
+        .product { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .buy-button { background: #28a745; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; }
+        .add-to-cart { background: #ffc107; color: black; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Our Products</h1>
+    
+    <div class="product">
+        <h3>Analytics Pro</h3>
+        <p>Advanced website analytics and tracking solution.</p>
+        <p><strong>Price: $29/month</strong></p>
+        <button class="buy-button" data-track-event="purchase-analytics-pro">Buy Now</button>
+        <button class="add-to-cart" data-track-event="add-to-cart-analytics-pro">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+        <h3>Tracker Lite</h3>
+        <p>Simple and efficient tracking for small websites.</p>
+        <p><strong>Price: $9/month</strong></p>
+        <button class="buy-button" data-track-event="purchase-tracker-lite">Buy Now</button>
+        <button class="add-to-cart" data-track-event="add-to-cart-tracker-lite">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+        <h3>Enterprise Solution</h3>
+        <p>Full-featured analytics suite for large organizations.</p>
+        <p><strong>Price: Contact us</strong></p>
+        <button class="buy-button" data-track-event="contact-enterprise">Contact Sales</button>
+        <button class="add-to-cart" data-track-event="demo-enterprise">Request Demo</button>
+    </div>
+
+    <script src="tracker.js"></script>
+</body>
+</html>
